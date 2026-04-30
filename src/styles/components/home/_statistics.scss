@@ -1,0 +1,110 @@
+.stats {
+  position: relative;
+  padding: 2.8rem 0;
+  border-block: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-2) 88%, transparent);
+}
+
+.stats__intro {
+  max-width: 40rem;
+  margin-bottom: 1.8rem;
+
+  h2 {
+    margin: 0.85rem 0 0.9rem;
+    font-family: var(--font-display), serif;
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--text);
+  }
+
+  p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+}
+
+.stats__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface-3) 92%, transparent);
+  border: 1px solid var(--border);
+  color: var(--green-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.stats__grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.stats__card {
+  min-height: 12rem;
+  padding: 1.85rem 1.4rem;
+  border-radius: 1.4rem;
+  background: color-mix(in srgb, var(--surface-3) 90%, transparent);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  animation: bobSoft 8s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  strong {
+    display: block;
+    font-family: var(--font-display), serif;
+    font-size: clamp(2rem, 4.6vw, 3.2rem);
+    font-weight: 500;
+    line-height: 1;
+    color: var(--green-mid);
+  }
+
+  span {
+    display: block;
+    margin-top: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+}
+
+.stats__card:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.stats__card:nth-child(3) {
+  animation-delay: 0.36s;
+}
+
+.stats__card:nth-child(4) {
+  animation-delay: 0.54s;
+}
+
+[data-theme="dark"] .stats__card strong {
+  color: #f4fbf6;
+}
+
+@media (min-width: 720px) {
+  .stats__intro {
+    margin-bottom: 2.2rem;
+  }
+
+  .stats__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

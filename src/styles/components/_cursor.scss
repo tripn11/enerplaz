@@ -1,0 +1,55 @@
+@use "../abstracts/variables";
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1200;
+  opacity: 0;
+  transition: opacity 0.18s var(--ease-standard);
+}
+
+.cursor.is-visible {
+  opacity: 0.95;
+}
+
+.cursor--outer {
+  width: 2.3rem;
+  height: 2.3rem;
+  border: 1px solid rgba(46, 196, 122, 0.65);
+  border-radius: 50%;
+  transition:
+    width 0.2s var(--ease-standard),
+    height 0.2s var(--ease-standard),
+    border-color 0.2s var(--ease-standard),
+    background 0.2s var(--ease-standard);
+}
+
+.cursor--outer.is-hovered {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(46, 196, 122, 0.08);
+  border-color: rgba(84, 193, 246, 0.8);
+}
+
+.cursor--outer.is-clicked {
+  width: 2rem;
+  height: 2rem;
+}
+
+.cursor--inner {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--green-light);
+  box-shadow: 0 0 16px rgba(46, 196, 122, 0.65);
+}
+
+@media (pointer: fine) {
+  body,
+  a,
+  button {
+    cursor: none;
+  }
+}

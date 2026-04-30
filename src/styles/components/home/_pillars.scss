@@ -1,0 +1,125 @@
+.pillars {
+  position: relative;
+}
+
+.pillars__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.pillar-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  min-height: 25rem;
+  border-radius: 1.75rem;
+  color: #fff;
+  background-color: #0d3655;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.28s var(--ease-standard);
+
+  &:hover {
+    transform: translateY(-6px);
+  }
+
+  p {
+    margin: 0 0 1.5rem;
+    max-width: 32rem;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.8;
+  }
+
+  h3 {
+    margin: 0.85rem 0 1rem;
+    font-family: var(--font-display), serif;
+    font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+    font-weight: 500;
+    line-height: 1.08;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(160deg, rgba(13, 92, 58, 0.78), rgba(9, 55, 95, 0.8)),
+      rgba(5, 18, 28, 0.2);
+  }
+}
+
+// .pillar-card--solar {
+  // background-image: url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80");
+// }
+
+// .pillar-card--mobility {
+  // background-image: url("https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1400&q=80");
+// }
+
+
+.pillar-card--solar {
+  background-image: url("/solar.jpeg");
+}
+
+.pillar-card--mobility {
+  background-image: url("/electric-vehicle.jpg");
+}
+
+.pillar-card__tag {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--lime-soft);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.pillar-card h3,
+.pillar-card p,
+.pill-tags,
+.pillar-card__cta {
+  position: relative;
+  z-index: 1;
+}
+
+.pillar-card__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: auto;
+  min-height: 3rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(245, 251, 246, 0.96);
+  color: #0d3655;
+  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(4, 14, 24, 0.24);
+  transition:
+    transform 0.24s var(--ease-standard),
+    background 0.24s var(--ease-standard),
+    color 0.24s var(--ease-standard);
+
+  &:hover {
+    transform: translateY(-2px);
+    background: #ffffff;
+    color: #0b4f34;
+  }
+}
+
+@media (min-width: 720px) {
+  .pillars__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

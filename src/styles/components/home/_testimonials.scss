@@ -1,0 +1,65 @@
+.testimonials {
+  position: relative;
+}
+
+.testimonials__frame {
+  overflow: hidden;
+}
+
+.testimonials__track {
+  display: flex;
+  transition: transform 0.6s var(--ease-standard);
+}
+
+.testimonials__slide {
+  min-width: 100%;
+  padding: 0 0.2rem;
+}
+
+.testimonials__card {
+  padding: clamp(1.6rem, 4vw, 3rem);
+  border-radius: 1.8rem;
+  border: 1px solid var(--border);
+  background:
+    radial-gradient(circle at top right, rgba(46, 196, 122, 0.12), transparent 30%),
+    color-mix(in srgb, var(--surface-3) 90%, transparent);
+  box-shadow: var(--shadow-md);
+
+  p {
+    margin: 0;
+    font-family: var(--font-display), serif;
+    font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+    font-weight: 500;
+    line-height: 1.42;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 1.75rem;
+    color: var(--text-muted);
+  }
+}
+
+.testimonials__controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.testimonials__dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  background: rgba(20, 122, 83, 0.2);
+  transition:
+    width 0.2s var(--ease-standard),
+    background 0.2s var(--ease-standard);
+}
+
+.testimonials__dot.is-active {
+  width: 2.2rem;
+  background: var(--green-mid);
+}

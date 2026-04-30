@@ -1,0 +1,53 @@
+:root {
+  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-body: "Aptos", "Segoe UI Variable Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --green-deep: #0b4f34;
+  --green-mid: #147a53;
+  --green-light: #2ec47a;
+  --lime-soft: #c7f7dc;
+  --sky-deep: #09375f;
+  --sky-mid: #145d99;
+  --sky-light: #54c1f6;
+  --ink-strong: #09120d;
+  --surface: #f5f8f5;
+  --surface-2: #ecf3ee;
+  --surface-3: #ffffff;
+  --surface-dark: #08110c;
+  --surface-dark-2: #0f1d16;
+  --surface-dark-3: #13241b;
+  --text: #102018;
+  --text-soft: #42584a;
+  --text-muted: #6f8778;
+  --text-inverse: #f4fbf6;
+  --border: rgba(15, 67, 43, 0.12);
+  --border-strong: rgba(46, 196, 122, 0.22);
+  --glass: rgba(255, 255, 255, 0.72);
+  --hero-gradient: linear-gradient(135deg, #0d5c3a 0%, #0a3d6b 58%, #115f94 100%);
+  --brand-gradient: linear-gradient(135deg, #0b4f34 0%, #1ea568 50%, #54c1f6 100%);
+  --card-gradient: linear-gradient(135deg, rgba(46, 196, 122, 0.16), rgba(84, 193, 246, 0.1));
+  --shadow-sm: 0 10px 24px rgba(10, 26, 18, 0.08);
+  --shadow-md: 0 24px 54px rgba(8, 19, 13, 0.12);
+  --shadow-lg: 0 36px 80px rgba(8, 19, 13, 0.18);
+  --radius-sm: 16px;
+  --radius-md: 24px;
+  --radius-lg: 36px;
+  --nav-height: 88px;
+  --section-space: clamp(4.5rem, 7vw, 7rem);
+  --container: 1240px;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] {
+  --surface: var(--surface-dark);
+  --surface-2: var(--surface-dark-2);
+  --surface-3: var(--surface-dark-3);
+  --text: #ebf6ef;
+  --text-soft: #b7d3c0;
+  --text-muted: #89a694;
+  --border: rgba(97, 170, 126, 0.18);
+  --border-strong: rgba(110, 226, 163, 0.24);
+  --glass: rgba(7, 17, 12, 0.72);
+  --shadow-sm: 0 12px 26px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 24px 60px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 36px 84px rgba(0, 0, 0, 0.5);
+}
