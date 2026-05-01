@@ -13,7 +13,7 @@ export default function Pillars() {
       <div className="container">
         <div className={`section-heading reveal ${header.visible ? "is-visible" : ""}`} ref={header.ref}>
           <span className="section-heading__eyebrow">What We Do</span>
-          <h2>Two core pillars pushing cleaner energy adoption forward.</h2>
+          <h2>Two Core Pillars Pushing Cleaner Energy Adoption Forward.</h2>
           <p>
             We combine on-the-ground energy delivery with mobility thinking so the brand feels more complete,
             more modern, and more useful to the people it serves.
@@ -23,7 +23,7 @@ export default function Pillars() {
         <div className="pillars__grid">
           <article className={`pillar-card pillar-card--solar reveal ${right.visible ? "is-visible" : ""}`} ref={right.ref}>
             <span className="pillar-card__tag">Pillar One</span>
-            <h3>Solar Power Innovations</h3>
+            <h3>Solar Power Installations</h3>
             <p>
               We do not just sell panels. We design end-to-end solar systems, deploy smart monitoring
               solutions, and run PayGo programmes that make clean energy accessible and affordable for

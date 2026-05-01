@@ -9,18 +9,21 @@ const testimonials = [
       "Enerplaz installed our solar system quickly, explained every decision clearly, and left us with something that feels stable enough to trust every day.",
     name: "Chukwuemeka Obi",
     role: "CEO, Obi Logistics Ltd",
+    image: "/testimonials/chukwuemeka.jpg",
   },
   {
     quote:
       "Their team paired technical depth with patience. The rollout felt organised from survey to commissioning, and the results have been strong.",
     name: "Amaka Nwosu",
     role: "Director, Nwosu Foundation",
+    image: "/testimonials/amaka.jpg",
   },
   {
     quote:
       "We came for cleaner power and stayed for the quality of their support. The training and aftercare made the entire experience better.",
     name: "Babatunde Adeyemi",
     role: "Managing Director, Adeyemi Properties",
+    image: "/testimonials/babatunde.jpg",
   },
 ];
 
@@ -57,8 +60,7 @@ export default function Testimonials() {
       <div className="container">
         <div className={`section-heading reveal ${header.visible ? "is-visible" : ""}`} ref={header.ref}>
           <span className="section-heading__eyebrow">Client Stories</span>
-          <h2>Trusted by teams who wanted cleaner power without messy delivery.</h2>
-          <p>We kept the testimonial section, but tuned the motion and presentation so it feels more polished and alive.</p>
+          <h2>Trusted by Teams who Wanted Cleaner Power Without Messy Delivery.</h2>
         </div>
 
         <div className="testimonials__frame">
@@ -67,9 +69,14 @@ export default function Testimonials() {
               <article key={item.name} className="testimonials__slide">
                 <div className="testimonials__card">
                   <p>{item.quote}</p>
-                  <footer>
-                    <strong>{item.name}</strong>
-                    <span>{item.role}</span>
+                  <footer className="testimonials__footer">
+                    <div className="testimonials__avatar">
+                      <img src={item.image} alt={item.name} />
+                    </div>
+                    <div className="testimonials__author">
+                      <strong>{item.name}</strong>
+                      <span>{item.role}</span>
+                    </div>
                   </footer>
                 </div>
               </article>

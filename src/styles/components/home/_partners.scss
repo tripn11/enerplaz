@@ -31,20 +31,27 @@
 .partners__item {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: center;
   padding: 1rem 2rem;
-  color: var(--text-soft);
-  font-family: var(--font-body), sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
   white-space: nowrap;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.partners__logo {
+  max-height: 3rem;
+  max-width: 12rem;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.7);
+  transition: filter 0.3s ease;
+
+  .partners__item:hover & {
+    filter: grayscale(0%) opacity(1);
+  }
 }
 
 .partners__dot {
-  width: 0.55rem;
-  height: 0.55rem;
-  border-radius: 50%;
-  background: var(--green-light);
-  box-shadow: 0 0 14px rgba(46, 196, 122, 0.5);
+  display: none;
 }

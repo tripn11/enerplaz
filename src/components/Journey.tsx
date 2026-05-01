@@ -1,7 +1,24 @@
 "use client";
 
-import { homeJourney } from "@/lib/site-data";
 import { useReveal } from "@/hooks/useReveal";
+
+const homeJourney = [
+  {
+    step: "01",
+    title: "Audit and Plan",
+    body: "We begin with site studies, load profiling, and a practical delivery roadmap that matches your budget and growth plans.",
+  },
+  {
+    step: "02",
+    title: "Build and Commission",
+    body: "Our team executes installation, quality checks, and commissioning with visible milestones and stronger on-site coordination.",
+  },
+  {
+    step: "03",
+    title: "Support and Scale",
+    body: "After handover, we stay close with training, maintenance guidance, and expansion support as your energy needs evolve.",
+  },
+];
 
 export default function Journey() {
   const header = useReveal<HTMLDivElement>();
@@ -12,11 +29,8 @@ export default function Journey() {
       <div className="container">
         <div className={`section-heading reveal ${header.visible ? "is-visible" : ""}`} ref={header.ref}>
           <span className="section-heading__eyebrow">How We Work</span>
-          <h2>A smoother delivery flow from first audit to long-term support.</h2>
-          <p>
-            The refreshed experience is not just visual. It reflects a clearer process that helps clients know
-            what is happening, what comes next, and where value shows up.
-          </p>
+          <h2>A Smoother Delivery Flow from First Audit to Long-term Support.</h2>
+
         </div>
 
         <div className={`journey__grid reveal ${cards.visible ? "is-visible" : ""}`} ref={cards.ref}>

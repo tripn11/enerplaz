@@ -4,10 +4,52 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { FiMoon, FiSun, FiArrowDown } from "react-icons/fi";
-import { navItems } from "@/lib/site-data";
 import Image from "next/image";
 
 type Theme = "light" | "dark";
+
+type NavChild = {
+  label: string;
+  href: string;
+  badge?: string;
+};
+
+type NavItem = {
+  label: string;
+  href: string;
+  children?: NavChild[];
+};
+
+const navItems: NavItem[] = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  {
+    label: "Services",
+    href: "#",
+    children: [
+      { label: "Solar Power Systems", href: "/services/solar" },
+      { label: "Electric Mobility", href: "/services/mobility" },
+      { label: "DC Living", href: "/services/dc-living" },
+      { label: "ENVAC Systems", href: "/services/envac" },
+      { label: "PayGo Services", href: "/services/paygo" },
+      { label: "Training", href: "/services/training" },
+      { label: "Street Lights", href: "/services/streetlights" },
+      { label: "Solar Water Pumps", href: "/services/solar-water-pumps" },
+    ],
+  },
+  { label: "Projects", href: "/projects" },
+  { label: "Blog", href: "/blog" },
+  {
+    label: "Careers",
+    href: "#",
+    children: [
+      { label: "Training", href: "/careers/training" },
+      { label: "Industrial Training", href: "/careers/industrial-training" },
+      { label: "Find a Job", href: "/careers/find-a-job" },
+    ],
+  },
+  { label: "Contact Us", href: "/contact" },
+];
 
 type NavbarProps = {
   theme: Theme;

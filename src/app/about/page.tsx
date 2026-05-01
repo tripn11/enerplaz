@@ -1,6 +1,13 @@
-import InteriorPage from "@/components/InteriorPage";
-import { pageContent } from "@/lib/site-data";
-
 export default function AboutPage() {
-  return <InteriorPage {...pageContent.about} />;
+  return (
+    <main className="interior">
+      <section className="interior__hero">
+        <div className="container interior__hero-inner">
+          <div className="interior__copy">
+            <h1>About Us</h1>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }

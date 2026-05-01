@@ -1,6 +1,13 @@
-import InteriorPage from "@/components/InteriorPage";
-import { careerPages } from "@/lib/site-data";
-
 export default function IndustrialTrainingPage() {
-  return <InteriorPage {...careerPages["industrial-training"]} />;
+  return (
+    <main className="interior">
+      <section className="interior__hero">
+        <div className="container interior__hero-inner">
+          <div className="interior__copy">
+            <h1>Industrial Training</h1>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }
